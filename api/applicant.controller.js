@@ -6,31 +6,18 @@ async function addApplicant(req, res) {
      res.send(applicant)
 }
 
-async function getApplicant(req, res) {
-    console.log('applicant ID:', req.params.id);
-    
-    const applicant = await applicantService.getById(req.params.id)
-    try {
-        res.send(applicant)
-    } catch {
-        res.status(401).send()
-    }
-}
-  
-async function getApplicant(req, res) {
-    const userId = req.query.data
+async function getApplicants(req, res) {
 
-    const applicants = await applicantService.query(userId)
+    const applicants = await boardService.query()
     try {
         res.json(applicants)
     }
     catch(err) {
         console.log(err);
     }
-    
 }
 
 module.exports = {
     addApplicant,
-    getApplicant,
+    getApplicants,
 }
