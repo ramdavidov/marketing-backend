@@ -26,3 +26,8 @@ async function add(applicant) {
         throw err;
     }
 }
+
+async function validateFirstSubmit (applicant) {
+    const applications = query()
+    return applications.find(application => application.emial = applicant.email)
+}
