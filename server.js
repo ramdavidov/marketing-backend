@@ -22,4 +22,4 @@ if (process.env.NODE_ENV === 'production') {
     app.use(cors(corsOptions));
 }
 
-http.listen(port, () => console.log(`Treller REST API listening on port ${port}!`))
+http.listen(port, () => console.log(`Marketing REST API listening on port ${port}!`))
