@@ -28,7 +28,6 @@ const applicantRoutes = require('./api/applicant/applicant.routes')
 // routes
 app.use('/api/application', applicantRoutes)
 
-http.listen(port, () => console.log(`Marketing REST API listening on port ${port}!`))
 const logger = require('./services/logger.service')
 http.listen(port, () => {
     logger.info('Server is running on port: ' + port)
