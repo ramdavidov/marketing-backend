@@ -19,7 +19,8 @@ async function add(applicant) {
     const collection = await dbService.getCollection('applicant')
     try {
         await collection.insertOne(applicant);
-        return applicant;
+        let postStatus = { success: true }
+        return postStatus
     } catch (err) {
         console.log(`ERROR: cannot insert applicant`)
         throw err;

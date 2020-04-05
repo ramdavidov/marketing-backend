@@ -22,4 +22,9 @@ if (process.env.NODE_ENV === 'production') {
     app.use(cors(corsOptions));
 }
 
+const applicantRoutes = require('./api/applicant/applicant.routes')
+
+// routes
+app.use('/api/application', applicantRoutes)
+
 http.listen(port, () => console.log(`Marketing REST API listening on port ${port}!`))
