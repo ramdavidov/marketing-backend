@@ -8,7 +8,7 @@ async function addApplicant(req, res) {
 
 async function getApplicants(req, res) {
 
-    const applicants = await boardService.query()
+    const applicants = await applicantService.query()
     try {
         res.json(applicants)
     }
